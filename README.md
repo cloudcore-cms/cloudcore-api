@@ -2,6 +2,8 @@
 
 A read-only, publicly-deployable API for serving published content from a Cloudcore CMS database. Deploy on `api.yourdomain.com` while keeping the CMS admin locked behind Cloudflare Access.
 
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudcore-cms/cloudcore-api)
+
 ## Why?
 
 The CMS admin has authentication, user management, media uploads, and write operations — it's a rich attack surface. By splitting the public-facing read API into a separate worker, you can:
