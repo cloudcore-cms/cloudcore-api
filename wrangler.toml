@@ -1,0 +1,28 @@
+# Cloudcore Public API - Read-only content endpoint
+# Deploy this on api.yourdomain.com while keeping the CMS behind Cloudflare Access
+name = "cloudcore-api"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+[dev]
+port = 8788
+local_protocol = "http"
+
+# D1 Database (same database as the CMS - read-only access)
+[[d1_databases]]
+binding = "DB"
+database_name = "cloudcore-cms"
+database_id = "local" # Replace with your D1 database ID
+
+# R2 Bucket for media serving (read-only)
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "cloudcore-cms"
+
+[vars]
+# Comma-separated allowed origins for CORS (e.g., "https://yourdomain.com,https://www.yourdomain.com")
+# Leave empty to allow all origins (for development)
+ALLOWED_ORIGINS = ""
+
+# Optional: Cache TTL in seconds for content responses (default: 60)
+# CACHE_TTL = "60"

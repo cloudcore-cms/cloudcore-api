@@ -1,0 +1,19 @@
+{
+  "name": "cloudcore-api",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local --persist-to=../cms/.wrangler/state",
+    "dev:local": "wrangler dev --local --persist-to=../cms/.wrangler/state",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.7.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.81.0"
+  }
+}
