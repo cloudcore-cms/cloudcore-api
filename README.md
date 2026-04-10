@@ -1,5 +1,7 @@
 # Cloudcore Public API
 
+![CI](https://github.com/cloudcore-cms/cloudcore-api/actions/workflows/ci.yml/badge.svg)
+
 A read-only, publicly-deployable API for serving published content from a Cloudcore CMS database. Deploy on `api.yourdomain.com` while keeping the CMS admin locked behind Cloudflare Access.
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudcore-cms/cloudcore-api)
